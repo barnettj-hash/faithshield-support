@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>FAITHSHIELD Support</title>
+    <meta
+      name="description"
+      content="Support for FAITHSHIELD: gameplay help, troubleshooting, and contact information."
+    />
+    <style>
+      :root {
+        --bg: #0f1d36;
+        --bg-2: #091222;
+        --card: #152948;
+        --text: #f6f0df;
+        --muted: #d0c7ae;
+        --accent: #d8ac45;
+        --line: #2f466d;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: "Avenir Next", Avenir, "Segoe UI", Helvetica, Arial, sans-serif;
+        color: var(--text);
+        background: radial-gradient(1200px 700px at 70% -10%, #2a3b5d 0%, var(--bg) 50%, var(--bg-2) 100%);
+        min-height: 100vh;
+        line-height: 1.5;
+      }
+
+      .wrap {
+        width: min(980px, 92vw);
+        margin: 40px auto 72px;
+      }
+
+      .hero {
+        padding: 28px;
+        border: 1px solid var(--line);
+        border-radius: 16px;
+        background: linear-gradient(135deg, rgba(216, 172, 69, 0.08), rgba(16, 32, 58, 0.42));
+      }
+
+      h1,
+      h2 {
+        margin: 0 0 12px;
+        font-family: Georgia, "Times New Roman", serif;
+        letter-spacing: 0.2px;
+      }
+
+      h1 {
+        font-size: clamp(30px, 4.4vw, 44px);
+        color: var(--text);
+      }
+
+      h2 {
+        font-size: clamp(22px, 3vw, 30px);
+      }
+
+      p {
+        margin: 0 0 12px;
+        color: var(--muted);
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 16px;
+        margin-top: 18px;
+      }
+
+      .card {
+        background: var(--card);
+        border: 1px solid var(--line);
+        border-radius: 14px;
+        padding: 16px;
+      }
+
+      .card h3 {
+        margin: 0 0 8px;
+        font-size: 18px;
+        color: var(--text);
+      }
+
+      .card ul {
+        margin: 0;
+        padding-left: 18px;
+        color: var(--muted);
+      }
+
+      .faq {
+        margin-top: 26px;
+      }
+
+      details {
+        background: var(--card);
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        padding: 12px 14px;
+        margin-bottom: 10px;
+      }
+
+      summary {
+        cursor: pointer;
+        font-weight: 700;
+        color: var(--text);
+      }
+
+      a {
+        color: var(--accent);
+      }
+
+      .contact {
+        margin-top: 18px;
+        padding: 16px;
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        background: rgba(9, 18, 34, 0.45);
+      }
+
+      .meta {
+        margin-top: 26px;
+        font-size: 14px;
+        color: var(--muted);
+      }
+    </style>
+  </head>
+  <body>
+    <main class="wrap">
+      <section class="hero">
+        <h1>FAITHSHIELD Support</h1>
+        <p>
+          FAITHSHIELD is an interactive Bible learning game focused on trivia, reflection journaling,
+          memorization, and story-based adventure from Genesis to David.
+        </p>
+        <p>
+          This page provides gameplay help, troubleshooting, and support contact details.
+        </p>
+      </section>
+
+      <section class="grid" aria-label="Core Features">
+        <article class="card">
+          <h3>Core Experience</h3>
+          <ul>
+            <li>Scripture-based challenge stages</li>
+            <li>Difficulty options: Easy, Medium, Advanced</li>
+            <li>Memory Verse Trainer and Reflection Journal</li>
+            <li>Daily thought and practical action prompt</li>
+          </ul>
+        </article>
+        <article class="card">
+          <h3>Technical Support</h3>
+          <ul>
+            <li>iPhone and iPad support</li>
+            <li>Audio/music controls in Game Hub</li>
+            <li>Saved profile name and progress tracking</li>
+            <li>Story preview narration and stage unlocks</li>
+          </ul>
+        </article>
+      </section>
+
+      <section class="faq" aria-label="FAQ">
+        <h2>FAQ</h2>
+
+        <details>
+          <summary>The app starts but audio sounds distorted.</summary>
+          <p>
+            Confirm device volume is not maxed and Music/SFX are enabled in the Game Hub settings.
+            Restart the app after changing audio settings.
+          </p>
+        </details>
+
+        <details>
+          <summary>My progress or name did not appear.</summary>
+          <p>
+            FAITHSHIELD stores progress locally on your device. If the app is removed and reinstalled,
+            local progress may reset.
+          </p>
+        </details>
+
+        <details>
+          <summary>A story preview appears blank.</summary>
+          <p>
+            Close and reopen the preview, then restart the app once. If the issue continues, send the
+            story name and device model in your support request.
+          </p>
+        </details>
+      </section>
+
+      <section class="contact" aria-label="Contact">
+        <h2>Contact Support</h2>
+        <p>
+          Email: <a href="mailto:support@faithshield.app">support@faithshield.app</a>
+        </p>
+        <p>
+          Include your device model, iOS version, and a screenshot/video when reporting issues.
+        </p>
+        <p>
+          Privacy Policy: <a href="./privacy.html">View Privacy Policy</a>
+        </p>
+      </section>
+
+      <p class="meta">
+        Last updated: February 2026
+      </p>
+    </main>
+  </body>
+</html>
