@@ -4,6 +4,10 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>FAITHSHIELD Privacy Policy</title>
+    <meta
+      name="description"
+      content="Privacy information for FAITHSHIELD, including what data is stored and how gameplay information is handled."
+    />
     <style>
       :root {
         --bg: #0f1d36;
@@ -29,27 +33,72 @@
       }
 
       .wrap {
-        width: min(920px, 92vw);
+        width: min(980px, 92vw);
         margin: 40px auto 72px;
-        background: var(--card);
+      }
+
+      .hero {
+        padding: 28px;
         border: 1px solid var(--line);
-        border-radius: 16px;
-        padding: 24px;
+        border-radius: 18px;
+        background:
+          radial-gradient(420px 220px at 85% 10%, rgba(216, 172, 69, 0.18), transparent 60%),
+          linear-gradient(135deg, rgba(216, 172, 69, 0.12), rgba(16, 32, 58, 0.62));
+        box-shadow: 0 22px 48px rgba(0, 0, 0, 0.22);
+      }
+
+      .hero-shell {
+        display: grid;
+        grid-template-columns: 108px 1fr;
+        gap: 20px;
+        align-items: center;
+      }
+
+      .hero-mark {
+        width: 108px;
+        height: 108px;
+        border-radius: 22px;
+        border: 1px solid rgba(216, 172, 69, 0.34);
+        background: rgba(9, 18, 34, 0.42);
+        box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.03), 0 14px 30px rgba(0, 0, 0, 0.18);
+        display: grid;
+        place-items: center;
+        padding: 12px;
+      }
+
+      .hero-mark img {
+        width: 100%;
+        height: 100%;
+        display: block;
+      }
+
+      .eyebrow {
+        margin: 0 0 8px;
+        color: var(--accent);
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+        font-size: 12px;
+        font-weight: 800;
       }
 
       h1,
-      h2 {
+      h2,
+      h3 {
         margin: 0 0 12px;
         font-family: Georgia, "Times New Roman", serif;
+        letter-spacing: 0.2px;
       }
 
       h1 {
-        font-size: clamp(28px, 4vw, 40px);
+        font-size: clamp(30px, 4.4vw, 44px);
       }
 
       h2 {
-        margin-top: 18px;
-        font-size: clamp(20px, 2.8vw, 28px);
+        font-size: clamp(22px, 3vw, 30px);
+      }
+
+      h3 {
+        font-size: 18px;
       }
 
       p,
@@ -57,60 +106,212 @@
         color: var(--muted);
       }
 
+      .hero-copy p:last-of-type {
+        margin-bottom: 0;
+      }
+
+      .hero-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 18px;
+      }
+
+      .hero-btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 150px;
+        padding: 12px 18px;
+        border-radius: 10px;
+        border: 1px solid rgba(216, 172, 69, 0.32);
+        background: rgba(9, 18, 34, 0.48);
+        color: var(--text);
+        font-weight: 800;
+        text-decoration: none;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.14);
+      }
+
+      .hero-btn.primary {
+        background: linear-gradient(180deg, #e0b458, #c69336);
+        color: #1f160d;
+      }
+
+      .hero-btn:hover,
+      .hero-btn:focus-visible {
+        background: linear-gradient(180deg, #e8bf6e, #d09c40);
+        color: #1f160d;
+      }
+
+      .hero-btn.secondary:hover,
+      .hero-btn.secondary:focus-visible {
+        background: rgba(23, 39, 68, 0.78);
+        color: var(--text);
+      }
+
+      .policy {
+        display: grid;
+        gap: 18px;
+        margin-top: 22px;
+      }
+
+      .panel {
+        background: var(--card);
+        border: 1px solid var(--line);
+        border-radius: 16px;
+        padding: 22px;
+      }
+
+      .panel p:last-child,
+      .panel ul:last-child {
+        margin-bottom: 0;
+      }
+
       ul {
-        margin-top: 6px;
+        margin-top: 8px;
+        padding-left: 18px;
       }
 
       a {
         color: var(--accent);
       }
+
+      .summary-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 16px;
+      }
+
+      .summary-card {
+        background: rgba(9, 18, 34, 0.45);
+        border: 1px solid var(--line);
+        border-radius: 14px;
+        padding: 16px;
+      }
+
+      .summary-card p {
+        margin: 0;
+      }
+
+      .meta {
+        margin-top: 24px;
+        font-size: 14px;
+      }
+
+      @media (max-width: 720px) {
+        .hero-shell {
+          grid-template-columns: 1fr;
+          justify-items: center;
+          text-align: center;
+        }
+
+        .hero-mark {
+          width: 96px;
+          height: 96px;
+        }
+
+        .hero-actions {
+          justify-content: center;
+        }
+
+        .hero-btn {
+          width: 100%;
+        }
+      }
     </style>
   </head>
   <body>
     <main class="wrap">
-      <h1>FAITHSHIELD Privacy Policy</h1>
-      <p>Effective date: February 2026</p>
+      <section class="hero">
+        <div class="hero-shell">
+          <div class="hero-mark">
+            <img src="./assets/faith-shield.svg" alt="FAITHSHIELD icon" />
+          </div>
+          <div class="hero-copy">
+            <p class="eyebrow">Interactive Bible Learning</p>
+            <h1>FAITHSHIELD Privacy Policy</h1>
+            <p>
+              This page explains what information FAITHSHIELD stores, how gameplay data is handled,
+              and what choices players have when using the app and desktop experience.
+            </p>
+            <p>Effective date: February 2026</p>
+            <div class="hero-actions" aria-label="Privacy links">
+              <a class="hero-btn primary" href="./index.html">Back to Support</a>
+              <a class="hero-btn secondary" href="https://barnettj-hash.github.io/faithshield/" target="_blank" rel="noopener">Play on Desktop</a>
+              <a class="hero-btn secondary" href="mailto:support@faithshield.app">Contact Support</a>
+            </div>
+          </div>
+        </div>
+      </section>
 
-      <p>
-        FAITHSHIELD is designed for Bible learning gameplay. This policy explains what data is handled
-        by the app.
-      </p>
+      <section class="policy" aria-label="Privacy details">
+        <article class="panel">
+          <h2>Privacy at a Glance</h2>
+          <div class="summary-grid">
+            <div class="summary-card">
+              <h3>Stored Locally</h3>
+              <p>Player name, progress, settings, streaks, and activity state are kept on the device.</p>
+            </div>
+            <div class="summary-card">
+              <h3>No Selling of Data</h3>
+              <p>FAITHSHIELD is not designed to sell personal information or share gameplay data for advertising.</p>
+            </div>
+            <div class="summary-card">
+              <h3>Your Control</h3>
+              <p>You can reset progress in the app or remove the app to clear local gameplay data.</p>
+            </div>
+          </div>
+        </article>
 
-      <h2>Information We Collect</h2>
-      <ul>
-        <li>Player name entered in-app</li>
-        <li>Local gameplay progress (levels, XP, settings, streaks, and activity state)</li>
-      </ul>
+        <article class="panel">
+          <h2>Information We Collect</h2>
+          <p>FAITHSHIELD is designed for Bible learning gameplay. Information handled by the app may include:</p>
+          <ul>
+            <li>Player name entered in-app</li>
+            <li>Local gameplay progress such as levels, XP, settings, streaks, and activity state</li>
+          </ul>
+        </article>
 
-      <h2>How Data Is Stored</h2>
-      <p>
-        FAITHSHIELD stores gameplay data locally on your device. This data is used to preserve your
-        in-app experience between sessions.
-      </p>
+        <article class="panel">
+          <h2>How Data Is Stored</h2>
+          <p>
+            FAITHSHIELD stores gameplay data locally on your device. This data is used to preserve your
+            in-app experience between sessions and support progress through the game.
+          </p>
+        </article>
 
-      <h2>Data Sharing</h2>
-      <p>
-        FAITHSHIELD does not sell personal data. The app is not intended to share user gameplay data with
-        third parties for advertising.
-      </p>
+        <article class="panel">
+          <h2>Data Sharing</h2>
+          <p>
+            FAITHSHIELD does not sell personal data. The app is not intended to share user gameplay data
+            with third parties for advertising.
+          </p>
+        </article>
 
-      <h2>Children's Privacy</h2>
-      <p>
-        Parents or guardians should supervise children using mobile apps and review device privacy settings.
-      </p>
+        <article class="panel">
+          <h2>Children's Privacy</h2>
+          <p>
+            Parents or guardians should supervise children using mobile apps and review device privacy settings.
+          </p>
+        </article>
 
-      <h2>Your Choices</h2>
-      <p>
-        You can reset in-app progress using in-game reset controls or by removing the app from your device.
-      </p>
+        <article class="panel">
+          <h2>Your Choices</h2>
+          <p>
+            You can reset in-app progress using in-game reset controls or by removing the app from your device.
+          </p>
+        </article>
 
-      <h2>Contact</h2>
-      <p>
-        For privacy questions, contact:
-        <a href="mailto:support@faithshield.app">support@faithshield.app</a>
-      </p>
+        <article class="panel">
+          <h2>Contact</h2>
+          <p>
+            For privacy questions, contact
+            <a href="mailto:support@faithshield.app">support@faithshield.app</a>.
+          </p>
+        </article>
+      </section>
 
-      <p>
+      <p class="meta">
         Return to <a href="./index.html">Support Home</a>.
       </p>
     </main>
