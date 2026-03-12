@@ -49,6 +49,13 @@
 
       .hero-shell {
         display: grid;
+        grid-template-columns: minmax(0, 1.2fr) minmax(250px, 320px);
+        gap: 24px;
+        align-items: stretch;
+      }
+
+      .hero-main {
+        display: grid;
         grid-template-columns: 108px 1fr;
         gap: 20px;
         align-items: center;
@@ -85,11 +92,57 @@
         margin-bottom: 0;
       }
 
+      .hero-highlights {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 18px;
+      }
+
+      .hero-pill {
+        padding: 9px 12px;
+        border-radius: 999px;
+        border: 1px solid rgba(216, 172, 69, 0.28);
+        background: rgba(9, 18, 34, 0.5);
+        color: var(--text);
+        font-size: 13px;
+        font-weight: 700;
+      }
+
       .hero-actions {
         display: flex;
         flex-wrap: wrap;
         gap: 12px;
         margin-top: 18px;
+      }
+
+      .hero-side {
+        border: 1px solid rgba(216, 172, 69, 0.18);
+        border-radius: 16px;
+        padding: 18px;
+        background: rgba(9, 18, 34, 0.5);
+        box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.03);
+      }
+
+      .hero-side h3 {
+        margin: 0 0 10px;
+        font-size: 20px;
+        color: var(--text);
+        font-family: Georgia, "Times New Roman", serif;
+      }
+
+      .hero-side p {
+        margin-bottom: 10px;
+      }
+
+      .hero-side ul {
+        margin: 12px 0 0;
+        padding-left: 18px;
+        color: var(--muted);
+      }
+
+      .hero-side li + li {
+        margin-top: 8px;
       }
 
       .hero-btn {
@@ -140,11 +193,48 @@
         margin-top: 18px;
       }
 
+      .showcase {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 16px;
+        margin-top: 18px;
+      }
+
+      .showcase-card {
+        background:
+          linear-gradient(180deg, rgba(216, 172, 69, 0.12), rgba(21, 41, 72, 0.96));
+        border: 1px solid var(--line);
+        border-radius: 16px;
+        padding: 18px;
+        box-shadow: 0 16px 32px rgba(0, 0, 0, 0.14);
+      }
+
+      .showcase-kicker {
+        display: inline-block;
+        margin-bottom: 10px;
+        color: var(--accent);
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        font-size: 11px;
+        font-weight: 800;
+      }
+
+      .showcase-card strong {
+        display: block;
+        margin-bottom: 8px;
+        font-size: 22px;
+        color: var(--text);
+      }
+
       .card {
         background: var(--card);
         border: 1px solid var(--line);
         border-radius: 14px;
         padding: 16px;
+      }
+
+      .section-title {
+        margin-top: 28px;
       }
 
       .card h3 {
@@ -189,6 +279,30 @@
         background: rgba(9, 18, 34, 0.45);
       }
 
+      .support-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 16px;
+        margin-top: 18px;
+      }
+
+      .support-card {
+        background: rgba(9, 18, 34, 0.45);
+        border: 1px solid var(--line);
+        border-radius: 14px;
+        padding: 18px;
+      }
+
+      .support-card h3 {
+        margin: 0 0 8px;
+        font-size: 20px;
+        color: var(--text);
+      }
+
+      .support-card p:last-child {
+        margin-bottom: 0;
+      }
+
       .site-footer {
         margin-top: 26px;
         padding: 18px 20px;
@@ -227,6 +341,11 @@
         .hero-shell {
           grid-template-columns: 1fr;
           justify-items: center;
+        }
+
+        .hero-main {
+          grid-template-columns: 1fr;
+          justify-items: center;
           text-align: center;
         }
 
@@ -235,12 +354,24 @@
           height: 96px;
         }
 
+        .hero-highlights {
+          justify-content: center;
+        }
+
         .hero-actions {
           justify-content: center;
         }
 
         .hero-btn {
           width: 100%;
+        }
+
+        .hero-side {
+          width: 100%;
+        }
+
+        .showcase {
+          grid-template-columns: 1fr;
         }
 
         .site-footer {
@@ -260,28 +391,67 @@
     <main class="wrap">
       <section class="hero">
         <div class="hero-shell">
-          <div class="hero-mark">
-            <img src="./assets/faith-shield.svg" alt="FAITHSHIELD icon" />
-          </div>
-          <div class="hero-copy">
-            <p class="eyebrow">Interactive Bible Learning</p>
-            <h1>FAITHSHIELD Support</h1>
-            <p>
-              FAITHSHIELD is an interactive Bible learning game focused on trivia, reflection journaling,
-              memorization, and story-based adventure from Genesis to David.
-            </p>
-            <p>
-              Find help here, review privacy details, or jump straight into the desktop version.
-            </p>
-            <div class="hero-actions" aria-label="Support links">
-              <a class="hero-btn primary" href="https://barnettj-hash.github.io/faithshield/" target="_blank" rel="noopener">Play on Desktop</a>
-              <a class="hero-btn secondary" href="./privacy.html">Privacy Policy</a>
-              <a class="hero-btn secondary" href="mailto:support@faithshield.app">Contact Support</a>
+          <div class="hero-main">
+            <div class="hero-mark">
+              <img src="./assets/faith-shield.svg" alt="FAITHSHIELD icon" />
+            </div>
+            <div class="hero-copy">
+              <p class="eyebrow">Interactive Bible Learning</p>
+              <h1>FAITHSHIELD Support</h1>
+              <p>
+                FAITHSHIELD is a Bible adventure built around Scripture memory, challenge-based learning,
+                daily reflection, and story-driven progress from Genesis to David.
+              </p>
+              <p>
+                This page gives players one clear place to get help, review privacy information, and jump
+                into the desktop version.
+              </p>
+              <div class="hero-highlights" aria-label="Highlights">
+                <span class="hero-pill">100 story-driven levels</span>
+                <span class="hero-pill">Trivia, memory, and reflection</span>
+                <span class="hero-pill">iPhone, iPad, and desktop play</span>
+              </div>
+              <div class="hero-actions" aria-label="Support links">
+                <a class="hero-btn primary" href="https://barnettj-hash.github.io/faithshield/" target="_blank" rel="noopener">Play on Desktop</a>
+                <a class="hero-btn secondary" href="./privacy.html">Privacy Policy</a>
+                <a class="hero-btn secondary" href="mailto:support@faithshield.app">Contact Support</a>
+              </div>
             </div>
           </div>
+          <aside class="hero-side" aria-label="Quick help">
+            <p class="eyebrow">Start Here</p>
+            <h3>What you can do from this page</h3>
+            <p>
+              Open the desktop version, find help fast, and send support details that make troubleshooting easier.
+            </p>
+            <ul>
+              <li>Use desktop play for a larger-screen FAITHSHIELD experience</li>
+              <li>Read privacy details before submission or support requests</li>
+              <li>Send device model, iOS version, and screenshots for the fastest help</li>
+            </ul>
+          </aside>
         </div>
       </section>
 
+      <section class="showcase" aria-label="Game highlights">
+        <article class="showcase-card">
+          <span class="showcase-kicker">Adventure</span>
+          <strong>Genesis to David</strong>
+          <p>Progress through Bible story eras with challenge stages, previews, and growing difficulty.</p>
+        </article>
+        <article class="showcase-card">
+          <span class="showcase-kicker">Formation</span>
+          <strong>Memory + Reflection</strong>
+          <p>Build Scripture recall through the Memory Verse Trainer and apply lessons in the Reflection Journal.</p>
+        </article>
+        <article class="showcase-card">
+          <span class="showcase-kicker">Access</span>
+          <strong>Desktop Ready</strong>
+          <p>Play FAITHSHIELD in your browser while keeping the same mission-driven learning focus as the app.</p>
+        </article>
+      </section>
+
+      <h2 class="section-title">Core Features</h2>
       <section class="grid" aria-label="Core Features">
         <article class="card">
           <h3>Core Experience</h3>
@@ -300,6 +470,22 @@
             <li>Saved profile name and progress tracking</li>
             <li>Story preview narration and stage unlocks</li>
           </ul>
+        </article>
+      </section>
+
+      <h2 class="section-title">Quick Help</h2>
+      <section class="support-grid" aria-label="Quick help">
+        <article class="support-card">
+          <h3>Best First Step</h3>
+          <p>Start with the desktop version if you want to explore FAITHSHIELD on a larger screen before opening the mobile app.</p>
+        </article>
+        <article class="support-card">
+          <h3>When Reporting a Problem</h3>
+          <p>Include your device model, iOS version, and a screenshot or short video so support can pinpoint the issue faster.</p>
+        </article>
+        <article class="support-card">
+          <h3>Need Privacy Details</h3>
+          <p>Use the privacy page for a clear summary of what is stored locally and what choices players have over their data.</p>
         </article>
       </section>
 
