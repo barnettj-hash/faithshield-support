@@ -200,6 +200,34 @@
         margin-top: 18px;
       }
 
+      .metrics {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 14px;
+        margin-top: 18px;
+      }
+
+      .metric {
+        padding: 16px;
+        border-radius: 16px;
+        border: 1px solid rgba(216, 172, 69, 0.18);
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.03), rgba(9, 18, 34, 0.5));
+        box-shadow: 0 14px 30px rgba(0, 0, 0, 0.14);
+      }
+
+      .metric strong {
+        display: block;
+        margin-bottom: 6px;
+        color: var(--text);
+        font-size: 28px;
+        font-family: Georgia, "Times New Roman", serif;
+      }
+
+      .metric span {
+        color: var(--muted);
+        font-size: 14px;
+      }
+
       .showcase-card {
         background:
           linear-gradient(180deg, rgba(216, 172, 69, 0.12), rgba(21, 41, 72, 0.96));
@@ -207,6 +235,24 @@
         border-radius: 16px;
         padding: 18px;
         box-shadow: 0 16px 32px rgba(0, 0, 0, 0.14);
+      }
+
+      .showcase-card,
+      .card,
+      .support-card,
+      details,
+      .contact {
+        transition: transform 180ms ease, border-color 180ms ease, box-shadow 180ms ease, background 180ms ease;
+      }
+
+      .showcase-card:hover,
+      .card:hover,
+      .support-card:hover,
+      details:hover,
+      .contact:hover {
+        transform: translateY(-2px);
+        border-color: rgba(216, 172, 69, 0.34);
+        box-shadow: 0 18px 36px rgba(0, 0, 0, 0.18);
       }
 
       .showcase-kicker {
@@ -235,6 +281,11 @@
 
       .section-title {
         margin-top: 28px;
+      }
+
+      .section-copy {
+        max-width: 700px;
+        margin-bottom: 0;
       }
 
       .card h3 {
@@ -277,6 +328,26 @@
         border: 1px solid var(--line);
         border-radius: 12px;
         background: rgba(9, 18, 34, 0.45);
+      }
+
+      .contact-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 16px;
+        margin-top: 16px;
+      }
+
+      .contact-block {
+        padding: 14px;
+        border-radius: 12px;
+        border: 1px solid rgba(216, 172, 69, 0.18);
+        background: rgba(255, 255, 255, 0.02);
+      }
+
+      .contact-block strong {
+        display: block;
+        margin-bottom: 6px;
+        color: var(--text);
       }
 
       .support-grid {
@@ -374,6 +445,14 @@
           grid-template-columns: 1fr;
         }
 
+        .metrics {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .contact-grid {
+          grid-template-columns: 1fr;
+        }
+
         .site-footer {
           flex-direction: column;
           align-items: flex-start;
@@ -433,6 +512,25 @@
         </div>
       </section>
 
+      <section class="metrics" aria-label="Quick stats">
+        <article class="metric">
+          <strong>100</strong>
+          <span>story-driven levels from Genesis to David</span>
+        </article>
+        <article class="metric">
+          <strong>3</strong>
+          <span>difficulty paths for steady Scripture growth</span>
+        </article>
+        <article class="metric">
+          <strong>Daily</strong>
+          <span>memory, reflection, and challenge practice</span>
+        </article>
+        <article class="metric">
+          <strong>Desktop</strong>
+          <span>browser play for larger-screen access</span>
+        </article>
+      </section>
+
       <section class="showcase" aria-label="Game highlights">
         <article class="showcase-card">
           <span class="showcase-kicker">Adventure</span>
@@ -452,6 +550,10 @@
       </section>
 
       <h2 class="section-title">Core Features</h2>
+      <p class="section-copy">
+        FAITHSHIELD blends Bible learning with progression systems, practical reflection, and challenge variety so
+        players can keep growing without the experience feeling repetitive.
+      </p>
       <section class="grid" aria-label="Core Features">
         <article class="card">
           <h3>Core Experience</h3>
@@ -474,6 +576,9 @@
       </section>
 
       <h2 class="section-title">Quick Help</h2>
+      <p class="section-copy">
+        These are the fastest ways to get unstuck, understand the app, and send the right details if you need support.
+      </p>
       <section class="support-grid" aria-label="Quick help">
         <article class="support-card">
           <h3>Best First Step</h3>
@@ -519,15 +624,21 @@
 
       <section class="contact" aria-label="Contact">
         <h2>Contact Support</h2>
-        <p>
-          Email: <a href="mailto:support@faithshield.app">support@faithshield.app</a>
-        </p>
-        <p>
-          Include your device model, iOS version, and a screenshot/video when reporting issues.
-        </p>
-        <p>
-          Privacy Policy: <a href="./privacy.html">View Privacy Policy</a>
-        </p>
+        <p>If you need help, send a short message with the basics so we can troubleshoot quickly.</p>
+        <div class="contact-grid">
+          <div class="contact-block">
+            <strong>Email</strong>
+            <p><a href="mailto:support@faithshield.app">support@faithshield.app</a></p>
+          </div>
+          <div class="contact-block">
+            <strong>Best details to include</strong>
+            <p>Device model, iOS version, and a screenshot or short screen recording.</p>
+          </div>
+          <div class="contact-block">
+            <strong>Need policy info?</strong>
+            <p><a href="./privacy.html">View the FAITHSHIELD Privacy Policy</a></p>
+          </div>
+        </div>
       </section>
 
       <p class="meta">
